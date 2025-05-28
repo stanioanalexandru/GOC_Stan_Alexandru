@@ -780,7 +780,7 @@ int main(int argc, char *argv[])
     case 2:
         creare_stiva(matrice, k_original, n, m, f2);
         break;
-    //case 3:
+    case 3:
     {
         NodeArbore *root = NULL;
         conversie_matrice_initiala(&root, matrice, n, m);
