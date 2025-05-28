@@ -79,12 +79,15 @@ Funcții relevante:
 - `preorder()` – parcurgere în preordine pentru afișare
 
 ### 🔹 Task 4 – Graf și lanț Hamiltonian
+Structuri adaugate:
+
+`constructie_t4`
 
 Funcții relevante:
 - `constructie_t4` – reconstruieste matricea unui nod din arbore
 - `construire_matrice_adiacenta` – creeaza graful celulelor vii
 - `DFS` – determina componentele conexe
 - `lant_hamiltonian` – determină lantul Hamiltonian maxim prin backtracking
-- `construire_lant` – gestionează componentele și extrage rezultatul final
+- `construire_lant` – gestioneaza componentele si extrage rezultatul final
 
    
