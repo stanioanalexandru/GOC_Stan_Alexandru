@@ -5,7 +5,7 @@ Acest proiect implementează o versiune extinsă a jocului Game of Life, folosin
 ## 🔧 Fișiere sursă
 
 - `gameoflife.c` – fișierul principal cu logica pentru input, generarea arborelui de generații și rezolvarea cerințelor.
-- `tas2_corectat.c` - versiunea ceruta a taskului 2, in care generatiile sunt aflate in functie de modificarile aflate in stiva, fara a construi o matrice de fiecare data
+- `task2_corectat.c` - versiunea ceruta a taskului 2, in care generatiile sunt aflate in functie de modificarile aflate in stiva, fara a construi o matrice de fiecare data
 - `bonus.c` - taskul bonus, in care se "inverseaza" cerinta de la taskul 2
   
 ## 🧪 Cerințe implementate
@@ -46,7 +46,7 @@ pentru task4 se alege t=4;
 
 Funcții relevante:
 - `numar_vecini_vii` – calculează vecinii vii pentru o celulă
-- `generare_generatii` – aplică regulile clasice ale jocului Life pentru `k` generații
+- `generare_generatii` – aplică regulile clasice ale jocului Life pentru `k` generatii
 
 ### 🔹 Task 2 – Stivă cu modificări
 --VARIANTA INITIALA--  
@@ -70,7 +70,7 @@ Funcții relevante:
 ### 🔹 Task 3 – Arbore binar de generații  
 Structuri adaugate:
 - `NodeArbore` – structura pentru arbore
-- 
+
 Funcții relevante:
 
 - `generare_lista()` - o functie esentiala; creeaza lista in fiecare nod aplicând reguli diferite pe ramuri(similara cu cea de la task2)
@@ -81,13 +81,24 @@ Funcții relevante:
 ### 🔹 Task 4 – Graf și lanț Hamiltonian
 Structuri adaugate:
 
-`constructie_t4`
+`Graph` - detalii despre graful format 
+`conex` - detalii despre componentele conexe - determina un vector de indecsi; numarul de noduri din componenta creata si legatura catre urmatoarea componenta conexa
 
 Funcții relevante:
-- `constructie_t4` – reconstruieste matricea unui nod din arbore
-- `construire_matrice_adiacenta` – creeaza graful celulelor vii
-- `DFS` – determina componentele conexe
-- `lant_hamiltonian` – determină lantul Hamiltonian maxim prin backtracking
-- `construire_lant` – gestioneaza componentele si extrage rezultatul final
+- `constructie_t4()` – reconstruieste matricea unui nod din arbore
+- `construire_matrice_adiacenta()` – creeaza graful celulelor vii
+- `DFS()` – determina componentele conexe
+- `lant_hamiltonian()` – determină lantul Hamiltonian maxim prin backtracking
+- `construire_lant()` – gestioneaza componentele si extrage rezultatul final
 
-   
+### 🔹 Task BONUS – Inversarea taskului 2
+
+-- Structura este aceeasi folosita la varianta modificata a Task-ului 2: `Stiva2`
+
+Functii esentiale:
+
+1. `date_matrice_noua` - aceasta functie este similara cu `is_alive()` folosita anterior, pentru a afla starea initiala
+
+2.`reconstruire_matrice` - aceasta functie reconstruieste matricea initiala pe baza starii aflate anterior si elementelor din matricea finala
+
+
